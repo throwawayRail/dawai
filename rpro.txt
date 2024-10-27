@@ -1,0 +1,97 @@
+# Scatter Plot
+# Sample data
+x <- rnorm(100)
+y <- rnorm(100)
+
+# Scatter plot
+plot(x, y, main="Scatter Plot", xlab="X-axis", ylab="Y-axis", col="blue", pch=19)
+
+
+
+
+
+
+
+
+# Histogram
+hist(x, main="Histogram of X", xlab="Values", col="lightblue", border="black")
+
+
+
+
+
+#BoxPlot
+
+# Sample data
+group <- factor(rep(1:3, each=20))
+value <- c(rnorm(20), rnorm(20, mean=1), rnorm(20, mean=2))
+
+# Boxplot
+boxplot(value ~ group, main="Boxplot by Group", xlab="Group", ylab="Value", col=c("red", "green", "blue"))
+
+
+# Palindrome checker
+is_palindrome <- function(x) {
+  rev_x <- rev(strsplit(as.character(x), "")[[1]])
+  if (identical(rev_x, strsplit(as.character(x), "")[[1]])) {
+    cat(x, "is a palindrome.\n")
+  } else {
+    cat(x, "is not a palindrome.\n")
+  }
+}
+
+# Example usage
+input_string <- "madam"
+is_palindrome(input_string)
+
+
+
+
+
+
+
+# Sum of Natural Numbers
+sum_natural <- function(n) {
+  cat("Sum of natural numbers up to", n, "is", sum(1:n), "\n")
+}
+
+# Example usage
+num <- 10
+sum_natural(num)
+
+
+
+
+
+
+
+# Factorial Calculator
+factorial_calculator <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial_calculator(n - 1))
+  }
+}
+
+# Example usage
+num <- 5
+cat("Factorial of", num, "is", factorial_calculator(num), "\n")
+
+
+
+
+
+
+# Even-Odd Checker
+even_odd <- function(n) {
+  if (n %% 2 == 0) {
+    cat(n, "is Even.\n")
+  } else {
+    cat(n, "is Odd.\n")
+  }
+}
+
+# Example usage
+num <- 10
+even_odd(num)
